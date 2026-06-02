@@ -330,7 +330,7 @@
   .genres-grid {
     margin-top: 4rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 
@@ -652,8 +652,7 @@
       Music for your<br>most <em>precious</em><br>moments
     </h1>
     <p class="hero-sub">
-      Beautiful live music for your wedding ceremony — from intimate solos to 
-      full acoustic sets, tailored entirely to you.
+      Beautiful live music for your wedding ceremony, tailored entirely to you.
     </p>
     <div class="hero-cta">
       <a href="#contact" class="btn-primary">Enquire Now</a>
@@ -712,23 +711,18 @@
   </div>
 </section>
 
-<!-- REPERTOIRE -->
+<!-- REPERTOIRE & SONG SUGGESTIONS -->
 <section class="repertoire" id="repertoire">
-  <div class="reveal">
+  <div class="reveal" style="text-align: center;">
     <p class="section-tag">Music Selection</p>
     <h2 class="section-title">A song for <em>every</em> moment</h2>
+    <p style="margin-top: 1.2rem; font-size: 0.95rem; font-weight: 300; color: var(--mid); max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+      These are just suggestions — I'm happy to learn any song that's meaningful to you. Works equally well for church, civil, humanist, and outdoor ceremonies.
+    </p>
   </div>
-  <div class="genres-grid">
-    <div class="genre-card reveal" style="transition-delay: 0.1s">
-      <span class="genre-icon">🎻</span>
-      <div class="genre-title">Classical & Traditional</div>
-      <ul class="genre-songs">
-        <li>Ave Maria</li>
-        <li>Panis Angelicus</li>
-        <li>Danny Boy</li>
-        <li>She Moved Through the Fair</li>
-      </ul>
-    </div>
+
+  <!-- Genre Cards -->
+  <div class="genres-grid" style="margin-top: 3rem;">
     <div class="genre-card reveal" style="transition-delay: 0.2s">
       <span class="genre-icon">🎵</span>
       <div class="genre-title">Contemporary Pop</div>
@@ -762,12 +756,105 @@
       </ul>
     </div>
   </div>
-  <div class="ornament reveal">
+
+  <!-- Ceremony Moment Cards -->
+  <div class="ornament reveal" style="margin-top: 5rem;">
     <div class="ornament-line"></div>
     <span class="ornament-icon">♪</span>
     <div class="ornament-line"></div>
   </div>
-  <p style="text-align:center; font-size:0.88rem; color:var(--mid); font-weight:300;" class="reveal">
+
+  <div class="reveal" style="text-align: center; margin: 2.5rem 0;">
+    <p class="section-tag">Ceremony Guide</p>
+    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--dark);">Songs by <em>ceremony moment</em></h3>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+
+    <div class="reveal" style="border: 1px solid var(--border); background: var(--lavender-pale); padding: 2.2rem; transition-delay: 0.05s;">
+      <div style="font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;">Entrance Procession</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--dark); margin-bottom: 1.2rem;">Walking Down the Aisle</div>
+      <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.85rem; font-weight: 300; line-height: 2.1; color: var(--mid);">
+        <li>At Last — Etta James</li>
+        <li>Can't Help Falling in Love — Elvis</li>
+        <li>A Thousand Years — Christina Perri</li>
+        <li>Someone Like You — Van Morrison</li>
+        <li>Make You Feel My Love — Adele</li>
+        <li>Your Song — Elton John</li>
+        <li>Songbird — Eva Cassidy</li>
+        <li>How Long Will I Love You — Ellie Goulding</li>
+      </ul>
+    </div>
+
+    <div class="reveal" style="border: 1px solid var(--border); background: var(--cream); padding: 2.2rem; transition-delay: 0.1s;">
+      <div style="font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;">Candle Lighting</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--dark); margin-bottom: 1.2rem;">Usually under a minute</div>
+      <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.85rem; font-weight: 300; line-height: 2.1; color: var(--mid);">
+        <li>Here Comes the Sun</li>
+        <li>The River Flows in You</li>
+        <li>A Thousand Years</li>
+        <li>Pachelbel's Canon</li>
+        <li>Si Bheag Si Mhór</li>
+        <li>I Giorni</li>
+      </ul>
+    </div>
+
+    <div class="reveal" style="border: 1px solid var(--border); background: var(--lavender-pale); padding: 2.2rem; transition-delay: 0.15s;">
+      <div style="font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;">Responsorial Psalm</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--dark); margin-bottom: 1.2rem;">Psalm & Hymns</div>
+      <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.85rem; font-weight: 300; line-height: 2.1; color: var(--mid);">
+        <li>On Eagle's Wings</li>
+        <li>Here I Am Lord</li>
+        <li>Amazing Grace</li>
+        <li>Be Not Afraid</li>
+        <li>The Clouds Veil</li>
+        <li>Hiding Place</li>
+      </ul>
+    </div>
+
+    <div class="reveal" style="border: 1px solid var(--border); background: var(--cream); padding: 2.2rem; transition-delay: 0.2s;">
+      <div style="font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;">Offertory</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--dark); margin-bottom: 1.2rem;">Presentation of the Gifts</div>
+      <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.85rem; font-weight: 300; line-height: 2.1; color: var(--mid);">
+        <li>Mo Ghrá Thú a Thiarna</li>
+        <li>Ave Maria</li>
+        <li>Ag Críost an Síol</li>
+        <li>Nella Fantasia</li>
+        <li>You Are Mine</li>
+      </ul>
+    </div>
+
+    <div class="reveal" style="border: 1px solid var(--border); background: var(--lavender-pale); padding: 2.2rem; transition-delay: 0.25s;">
+      <div style="font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;">Signing of the Register</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--dark); margin-bottom: 1.2rem;">A Special Moment</div>
+      <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.85rem; font-weight: 300; line-height: 2.1; color: var(--mid);">
+        <li>God Only Knows — The Beach Boys</li>
+        <li>Your Song — Elton John</li>
+        <li>Higher Love — James Vincent McMorrow</li>
+        <li>Fields of Gold — Eva Cassidy</li>
+        <li>Let It Be — The Beatles</li>
+        <li>Stand By Me — Ben E. King</li>
+        <li>Feels Like Home — Randy Newman</li>
+      </ul>
+    </div>
+
+    <div class="reveal" style="border: 1px solid var(--border); background: var(--cream); padding: 2.2rem; transition-delay: 0.3s;">
+      <div style="font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;">Recessional</div>
+      <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--dark); margin-bottom: 1.2rem;">Walking Back Up the Aisle</div>
+      <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.85rem; font-weight: 300; line-height: 2.1; color: var(--mid);">
+        <li>One Day Like This — Elbow</li>
+        <li>Marry You — Bruno Mars</li>
+        <li>Here Comes the Sun — The Beatles</li>
+        <li>Lovely Day — Bill Withers</li>
+        <li>Greatest Day — Take That</li>
+        <li>Ho Hey — The Lumineers</li>
+        <li>This Will Be — Natalie Cole</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p class="reveal" style="text-align: center; margin-top: 3rem; font-size: 0.88rem; color: var(--mid); font-weight: 300;">
     Don't see your song? Get in touch — I'm happy to learn something special just for your day.
   </p>
 </section>
@@ -781,7 +868,7 @@
   <div class="testimonials-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 4rem auto 0;">
     <div class="testimonial reveal">
       <div class="stars">★★★★★</div>
-      <p class="testimonial-text">Ciara was absolutely incredible on our wedding day. She had every guest in tears — in the best possible way. The church fell completely silent when she started singing.</p>
+      <p class="testimonial-text">Ciara was absolutely incredible on our wedding day. She had every guest in tears — in the best possible way. Everyone fell completely silent when she started singing.</p>
       <div class="testimonial-author">— Sarah & Colin, Cork</div>
     </div>
   </div>
