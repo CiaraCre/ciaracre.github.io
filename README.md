@@ -1,2 +1,2 @@
    # Ciara Creedon Music
-   Wedding singer based in Cork, Ireland.
+Singer based in Cork, Ireland.
