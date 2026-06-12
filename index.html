@@ -981,14 +981,17 @@
     .testimonials-grid { grid-template-columns: 1fr; }
 
     /* FUNERALS */
-    #funerals > div { grid-template-columns: 1fr !important; gap: 3rem !important; }
+    #funerals { padding: 4rem 1.5rem !important; }
+    #funerals > div { grid-template-columns: 1fr !important; gap: 2rem !important; }
 
     /* CONTACT */
-    .contact { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
-    .form-row { grid-template-columns: 1fr; }
+    .contact { grid-template-columns: 1fr !important; gap: 2rem !important; padding: 4rem 1.5rem !important; }
+    .form-row { grid-template-columns: 1fr !important; }
 
     /* INSTAGRAM */
-    #instagram-section { padding: 3rem 1.5rem !important; }
+    #instagram-section { padding: 2rem 1.5rem !important; }
+    #instagram-section .social-button-row { flex-direction: column; align-items: stretch; gap: 1rem; }
+    #instagram-section .social-button { width: 100% !important; display: block !important; }
     #instagram-section a { display: block; text-align: center; }
 
     /* VIDEO */
@@ -996,7 +999,9 @@
     section[style*="lavender-deep"] { padding: 3rem 1.5rem !important; }
 
     /* FOOTER */
-    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem !important; }
+    .footer-social { flex-direction: column; align-items: center; gap: 1rem; width: 100%; }
+    .footer-social a { width: 100%; justify-content: center; }
 
     /* INLINE GRIDS */
     div[style*="grid-template-columns: repeat(3"] {
@@ -1018,9 +1023,31 @@
     .hero-title { font-size: clamp(2.35rem, 13vw, 2.9rem); }
     .btn-primary { width: 100%; max-width: 280px; text-align: center; }
     .ceremony-guide { padding: 2rem 1.1rem; }
+    section { padding: 2.5rem 1.2rem !important; }
+    #funerals { padding: 2.5rem 1.2rem !important; }
+    .form-submit { width: 100%; box-sizing: border-box; }
+    .footer-logo { font-size: 0.95rem; }
+    .footer-copy { font-size: 0.65rem; }
+    .footer-social a { font-size: 0.7rem; padding: 0.55rem 1rem; }
   }
 
-  /* Video grid responsive */
+  /* Additional mobile fixes for inline-styled elements */
+  @media (max-width: 900px) {
+    /* Fix large gaps in funeral section */
+    #funerals [style*="gap: 6rem"] {
+      gap: 2rem !important;
+    }
+    #funerals [style*="padding: 7rem"] {
+      padding: 3rem 1.5rem !important;
+    }
+    /* Ensure lists in funeral section are readable */
+    #funerals li {
+      font-size: 0.85rem;
+    }
+    #funerals ul {
+      padding-left: 1.2rem;
+    }
+  }
   @media (max-width: 768px) {
     #video-grid {
       grid-template-columns: 1fr !important;
