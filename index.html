@@ -569,6 +569,12 @@
   }
 
 
+  .testimonials-grid--single {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 4rem auto 0;
+  }
+
   /* ── TESTIMONIALS ── */
   .testimonials {
     background: var(--lavender-pale);
@@ -752,6 +758,95 @@
 
   .form-submit:hover { background: var(--dark); }
 
+  /* ── FUNERALS ── */
+  .funerals {
+    background: var(--dark);
+    padding: 7rem 6rem;
+  }
+
+  .funerals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .funerals-body {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(237,232,245,0.65);
+  }
+
+  .funerals-cta {
+    display: inline-block;
+    margin-top: 2.5rem;
+    padding: 0.95rem 2.4rem;
+    background: var(--gold);
+    color: white;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  .funerals-cta:hover { background: var(--gold-light); }
+
+  .funerals-song-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .funerals-category {
+    margin-bottom: 2rem;
+  }
+
+  .funerals-category-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    color: var(--lavender-pale);
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(201,188,223,0.15);
+    padding-bottom: 0.6rem;
+  }
+
+  .funerals-song-list {
+    list-style: disc;
+    padding-left: 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 2.1;
+    color: rgba(237,232,245,0.65);
+  }
+
+  /* ── DIVIDER BAND ── */
+  .divider-band {
+    background: var(--dark);
+    padding: 2.5rem 6rem;
+    text-align: center;
+    border-top: 1px solid rgba(201,188,223,0.15);
+    border-bottom: 1px solid rgba(201,188,223,0.15);
+  }
+
+  .divider-band-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .divider-band-text {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--lavender-pale);
+  }
+
   /* ── FOOTER ── */
   footer {
     background: #130f1e;
@@ -866,8 +961,8 @@
 
   /* ── SCROLL REVEAL ── */
   .reveal {
-    opacity: 1;
-    transform: none;
+    opacity: 0;
+    transform: translateY(20px);
     transition: opacity 0.8s, transform 0.8s;
   }
   .reveal.visible {
@@ -1004,12 +1099,12 @@
     .testimonials-grid { grid-template-columns: 1fr; }
 
     /* FUNERALS */
-    #funerals { padding: 4rem 0.3rem !important; }
-    #funerals > div { grid-template-columns: 1fr !important; gap: 3.5rem !important; }
-    #funerals .section-tag { font-size: 0.85rem; margin-bottom: 1.3rem; }
-    #funerals .section-title { font-size: clamp(2.3rem, 8vw, 3.2rem); margin-bottom: 1.5rem; }
-    #funerals p { font-size: 1.02rem; line-height: 1.95; margin-bottom: 1.2rem; }
-    #funerals li { font-size: 0.98rem; line-height: 2.3; }
+    .funerals { padding: 4rem 1.5rem !important; }
+    .funerals-grid { grid-template-columns: 1fr !important; gap: 3.5rem !important; }
+    .funerals-song-tag { font-size: 0.85rem; margin-bottom: 1.3rem; }
+    .funerals .section-title { font-size: clamp(2.3rem, 8vw, 3.2rem); margin-bottom: 1.5rem; }
+    .funerals-body { font-size: 1.02rem; line-height: 1.95; margin-bottom: 1.2rem; }
+    .funerals-song-list li { font-size: 0.98rem; line-height: 2.3; }
 
     /* CONTACT */
     .contact { 
@@ -1139,9 +1234,9 @@
     }
     
     /* DIVIDER */
-    div[style*="Also available"] { padding: 2rem 1.5rem !important; }
-    div[style*="Also available"] p { font-size: 0.6rem !important; }
-    div[style*="Also available"] > div { gap: 1rem !important; }
+    .divider-band { padding: 2rem 1.5rem !important; }
+    .divider-band-text { font-size: 0.6rem !important; }
+    .divider-band-inner { gap: 1rem !important; }
   }
 
 
@@ -1173,17 +1268,14 @@
   /* Additional mobile fixes for inline-styled elements */
   @media (max-width: 900px) {
     /* Fix large gaps in funeral section */
-    #funerals [style*="gap: 6rem"] {
+    .funerals-grid {
       gap: 2rem !important;
     }
-    #funerals [style*="padding: 7rem"] {
-      padding: 3rem 1.5rem !important;
-    }
     /* Ensure lists in funeral section are readable */
-    #funerals li {
+    .funerals-song-list li {
       font-size: 0.85rem;
     }
-    #funerals ul {
+    .funerals-song-list {
       padding-left: 1.2rem;
     }
   }
@@ -1593,7 +1685,7 @@
     <p class="section-tag">Kind Words</p>
     <h2 class="section-title">From <em>couples</em> like you</h2>
   </div>
-  <div class="testimonials-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 4rem auto 0;">
+  <div class="testimonials-grid testimonials-grid--single">
     <div class="testimonial reveal">
       <div class="stars">★★★★★</div>
       <p class="testimonial-text">Ciara was absolutely incredible on our wedding day. She had every guest in tears — in the best possible way. Everyone fell completely silent when she started singing.</p>
@@ -1603,39 +1695,37 @@
 </section>
 
 <!-- DIVIDER -->
-<div style="background: var(--dark); padding: 2.5rem 6rem; text-align: center; border-top: 1px solid rgba(201,188,223,0.15); border-bottom: 1px solid rgba(201,188,223,0.15);">
-  <div style="display: flex; align-items: center; justify-content: center; gap: 2rem;">
-    
-    <p style="font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--lavender-pale);">Also available for funeral & memorial ceremonies</p>
-    
+<div class="divider-band">
+  <div class="divider-band-inner">
+    <p class="divider-band-text">Also available for funeral &amp; memorial ceremonies</p>
+  </div>
 </div>
-</section>
 
 <!-- FUNERALS -->
-<section style="background: var(--dark); padding: 7rem 6rem;" id="funerals">
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start;">
+<section class="funerals" id="funerals">
+  <div class="funerals-grid">
 
     <div class="reveal">
       <p class="section-tag" style="color: var(--gold);">Funeral Music</p>
       <h2 class="section-title" style="color: var(--lavender-pale);">A tender <em>farewell</em></h2>
-      <p style="margin-top: 1.5rem; font-size: 0.95rem; font-weight: 300; line-height: 1.9; color: rgba(237,232,245,0.65);">
+      <p class="funerals-body">
         Music can bring great comfort at a time of loss. I offer sensitive, heartfelt performances for funeral and memorial ceremonies across Munster and beyond — in churches, crematoriums, and gravesides.
       </p>
-      <p style="margin-top: 1.2rem; font-size: 0.95rem; font-weight: 300; line-height: 1.9; color: rgba(237,232,245,0.65);">
+      <p class="funerals-body">
         I understand that every person's life is unique, and I'll work with you and your family to choose music that truly honours their memory. I'm happy to learn a specific song that was meaningful to your loved one.
       </p>
-      <p style="margin-top: 1.2rem; font-size: 0.95rem; font-weight: 300; line-height: 1.9; color: rgba(237,232,245,0.65);">
+      <p class="funerals-body">
         Please don't hesitate to get in touch — I'll do everything I can to help at short notice.
       </p>
-      <a href="#contact" style="display: inline-block; margin-top: 2.5rem; padding: 0.95rem 2.4rem; background: var(--gold); color: white; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: background 0.3s;">Get in Touch</a>
+      <a href="#contact" class="funerals-cta">Get in Touch</a>
     </div>
 
     <div class="reveal" style="transition-delay: 0.2s;">
-      <p style="font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Song Suggestions</p>
+      <p class="funerals-song-tag">Song Suggestions</p>
 
-      <div style="margin-bottom: 2rem;">
-        <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--lavender-pale); margin-bottom: 0.8rem; border-bottom: 1px solid rgba(201,188,223,0.15); padding-bottom: 0.6rem;">Irish & Traditional</div>
-        <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.85rem; font-weight: 300; line-height: 2.1; color: rgba(237,232,245,0.65);">
+      <div class="funerals-category">
+        <div class="funerals-category-title">Irish &amp; Traditional</div>
+        <ul class="funerals-song-list">
           <li>The Parting Glass</li>
           <li>Danny Boy</li>
           <li>She Moved Through the Fair</li>
@@ -1644,9 +1734,9 @@
         </ul>
       </div>
 
-      <div style="margin-bottom: 2rem;">
-        <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--lavender-pale); margin-bottom: 0.8rem; border-bottom: 1px solid rgba(201,188,223,0.15); padding-bottom: 0.6rem;">Hymns & Religious</div>
-        <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.85rem; font-weight: 300; line-height: 2.1; color: rgba(237,232,245,0.65);">
+      <div class="funerals-category">
+        <div class="funerals-category-title">Hymns &amp; Religious</div>
+        <ul class="funerals-song-list">
           <li>Ave Maria</li>
           <li>How Great Thou Art</li>
           <li>On Eagle's Wings</li>
@@ -1657,9 +1747,9 @@
         </ul>
       </div>
 
-      <div>
-        <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--lavender-pale); margin-bottom: 0.8rem; border-bottom: 1px solid rgba(201,188,223,0.15); padding-bottom: 0.6rem;">Contemporary</div>
-        <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.85rem; font-weight: 300; line-height: 2.1; color: rgba(237,232,245,0.65);">
+      <div class="funerals-category">
+        <div class="funerals-category-title">Contemporary</div>
+        <ul class="funerals-song-list">
           <li>Fields of Gold — Eva Cassidy</li>
           <li>Somewhere Over the Rainbow</li>
           <li>Make You Feel My Love — Adele</li>
